@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_edit_reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.reminder.EditReminderActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etReminderHead"
+        android:text="Summary"
+        android:minLines="1"
+        android:maxLength="50"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/appToolbar" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etReminderContent"
+        android:layout_below="@id/etReminderHead" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ListView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/lvDate" />-->
+        <!--<ListView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/lvMonth" />-->
+        <!--<ListView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/lvYear" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<ImageButton-->
+        <!--android:text="Date"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btnDate"-->
+        <!--android:layout_below="@id/etReminderContent"-->
+        <!--app:srcCompat="@drawable/ic_date_range_black_24dp" />-->
+
+    <Button
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDate"
+        android:layout_below="@id/etReminderContent"/>
+
+    <Button
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnTime"
+        android:layout_below="@id/btnDate" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/tvDate"
+        android:text="Date"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/tvTime"
+        android:layout_alignRight="@id/btnTime"
+        android:scrollbars = "vertical"
+        android:inputType="textMultiLine">
+    </TextView>
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSaveReminder"
+        android:background="@android:color/transparent"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCancelReminder"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+</RelativeLayout>
